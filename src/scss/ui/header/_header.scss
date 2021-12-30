@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+
+.header{
+    padding: 5rem 0;
+
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tab {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo{
+        width: 30rem;
+        margin-bottom: 3rem;
+
+        @include m.tab {
+            margin-bottom: 0;
+        }
+    }
+}

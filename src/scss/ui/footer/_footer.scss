@@ -1,0 +1,25 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    padding: 3rem 0;
+    border-bottom: .5rem solid v.$primario;
+
+    &__grid{
+
+        @include m.tab {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__copy{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 3rem;
+
+        @include m.tab {
+            margin-top: 0;
+        }
+    }
+}

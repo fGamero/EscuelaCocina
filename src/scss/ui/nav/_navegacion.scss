@@ -1,0 +1,31 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tab {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__link{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+
+        &:last-of-type{
+            margin-bottom: 0rem;
+        }
+
+        @include m.tab {
+            margin-bottom: 0;
+        }
+
+        &:hover{
+            color: v.$primario;
+        }
+    }
+}   
